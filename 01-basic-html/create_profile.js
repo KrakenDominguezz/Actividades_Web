@@ -97,10 +97,10 @@ submitButton.addEventListener('click', function(event) {
   responseMessage.textContent = `Gracias por tus comentarios, ${name}, te contactaremos a ${email} en caso de ser necesario.`;
   responseMessage.style.display = 'block';
 
-  // Clear form fields
+  //Hacemos clear a los elementos
   document.getElementById('subject').value = '';
   document.getElementById('name').value = '';
-  document.getElementById('comments').value = '';
+  document.getElementById('comments').value = ''; 
   document.getElementById('email').value = '';
   document.getElementById('phone').value = '';
   
