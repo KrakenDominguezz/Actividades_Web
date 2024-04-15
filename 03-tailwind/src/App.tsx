@@ -17,14 +17,17 @@ function App() {
         <div className='underline flex flex-col items-center'>
           <h2 className='text-start text-lg font-bold'>Education</h2>
         </div>
-        <div className='text-md flex justify-between mx-20'>
+        <div className='flex-wrap flex-col gap-10'>
+        <div className='text-md flex justify-around mx-20'>
             <p >Instituto Tecnológico de Monterrey</p>
             <p>Monterrey, Nuevo León</p>
           </div>
-        <div className='text-md flex justify-between mx-20'>
+        <div className='text-md flex justify-around mx-20'>
             <p >B.Computer Science and Technology GPA 3.729 </p>
             <p>Aug. 2021 - August 2025</p>
         </div>
+        </div>
+       
       </div>
       
       <div id='TechnicalSkill ' className='mt-10'>
@@ -32,12 +35,16 @@ function App() {
             <h2 className='text-start text-lg font-bold'>Technical Skills</h2>
             
         </div>
-        <div className='text-md flex flex-col justify-start mx-20 font-bold'>
+        <div className='text-md flex flex-col mb-10 items-center mx-20 font-bold'>
               <p> Languages: C++, C Sharp, Python, HTML, CSS, JavaScript, SQL,Swift</p>
               <p>Developer Tools: Git, VS Code, Visual Studio,Linux, Jira, Github,Figma</p>
         </div>
       </div>
       <div id='Projects'>
+      <div className='underline flex flex-col items-center mb-10'>
+            <h2 className='text-start text-lg font-bold'>Projects</h2>
+            
+        </div>
       <div className="container mx-auto px-4 py-8">
       <ResumeProject
         title="Vita"
