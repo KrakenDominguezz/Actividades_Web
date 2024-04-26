@@ -46,58 +46,78 @@ function App() {
             
         </div>
       <div className="container mx-auto px-4 py-8">
-      <ResumeProject
-        title="Vita"
-        stack="Html, CSS, JS, React, Figma, NextJS"
-        timeframe="February 2024 -- Present"
-        description={[
-          "Worked on a website focused on health improvement utilizing AI to give suggestions on 3 aspects: Nutrition, Exercise, and Sleep.",
-          "Developed UI Design for a responsive web application utilizing Figma.",
-          "Worked in conjunction with a team of 5 developers utilizing SCRUM methodology and JIRA for Project Management needs.",
-          "Developed front-end landing page of the responsive web application utilizing React, CSS, HTML, JSX, and NextJS."
-        ]}
-      />
-      <ResumeProject
-        title="Ux Designer(MAE)"
-        stack="Figma"
-        timeframe="December 2023 -- March 2024"
-        description={[
-          "Working as a designer in the redesign of a web platform focused on connecting students to tutors for subjects inside Tec De Monterrey.",
-          "Developed UI Design for a responsive web application utilizing Figma.",
-        ]}
-      />
-      <ResumeProject
-        title="Banortinvest"
-        stack="Html, CSS, JS, React, Figma"
-        timeframe="September 2023 -- September 2023"
-        description={[
-          "Created a solution for people who didn't know how to invest in investment funds utilizing Artificial Intelligence",
-          "Designed, prototyped, and created a working interface for the solution utilizing React JS Framework"
-        ]}
-      />
-      <ResumeProject
-        title="Ticket Delivery and Collecting"
-        stack="Swift, Figma, Python, MSSQL, Jira, Git, Github"
-        timeframe="June 2023 -- Present"
-        description={[
-          "Developed a functioning prototype utilizing Figma to model an iOS application designed for Managers and Collectors working with an organization that receives donations physically",
-          "Utilized SwiftUI to create the front-end of the application, as well as implementing the integration with the API, to display our database data onto the front-end",
-          "Utilized different techniques to ensure application safety, as well as data encryption using hashing and other security measures such as web tokens"
-        ]}
-      />
-      <ResumeProject
-        title="Mentor Academico de Excelencia (MAE)"
-        stack="Python, C++"
-        timeframe="August 2022 -- Present"
-        description={[
-          "Working as a student mentor teaching students programming abilities inside Tec de Monterrey",
-          "Having to teach multiple mentoring sessions on topics such as loops, if-statements, arrays, 2D-Arrays, algorithms, etc.",
-          "1 on 1 coaching and advice on building projects for classes",
-          "Nation-wide reach in different Tec de Monterrey campuses using online technologies such as Discord and Zoom"
-        ]}
-      />
-    </div>
+          <ResumeProject
+            title="Vita"
+            stack="Html, CSS, JS, React, Figma, NextJS"
+            timeframe="February 2024 -- Present"
+            description={[
+              "Worked on a website focused on health improvement utilizing AI to give suggestions on 3 aspects: Nutrition, Exercise, and Sleep.",
+              "Developed UI Design for a responsive web application utilizing Figma.",
+              "Worked in conjunction with a team of 5 developers utilizing SCRUM methodology and JIRA for Project Management needs.",
+              "Developed front-end landing page of the responsive web application utilizing React, CSS, HTML, JSX, and NextJS."
+            ]}
+          />
+          <ResumeProject
+            title="Ux Designer(MAE)"
+            stack="Figma"
+            timeframe="December 2023 -- March 2024"
+            description={[
+              "Working as a designer in the redesign of a web platform focused on connecting students to tutors for subjects inside Tec De Monterrey.",
+              "Developed UI Design for a responsive web application utilizing Figma.",
+            ]}
+          />
+          <ResumeProject
+            title="Banortinvest"
+            stack="Html, CSS, JS, React, Figma"
+            timeframe="September 2023 -- September 2023"
+            description={[
+              "Created a solution for people who didn't know how to invest in investment funds utilizing Artificial Intelligence",
+              "Designed, prototyped, and created a working interface for the solution utilizing React JS Framework"
+            ]}
+          />
+          <ResumeProject
+            title="Ticket Delivery and Collecting"
+            stack="Swift, Figma, Python, MSSQL, Jira, Git, Github"
+            timeframe="June 2023 -- Present"
+            description={[
+              "Developed a functioning prototype utilizing Figma to model an iOS application designed for Managers and Collectors working with an organization that receives donations physically",
+              "Utilized SwiftUI to create the front-end of the application, as well as implementing the integration with the API, to display our database data onto the front-end",
+              "Utilized different techniques to ensure application safety, as well as data encryption using hashing and other security measures such as web tokens"
+            ]}
+          />
+          <ResumeProject
+            title="Mentor Academico de Excelencia (MAE)"
+            stack="Python, C++"
+            timeframe="August 2022 -- Present"
+            description={[
+              "Working as a student mentor teaching students programming abilities inside Tec de Monterrey",
+              "Having to teach multiple mentoring sessions on topics such as loops, if-statements, arrays, 2D-Arrays, algorithms, etc.",
+              "1 on 1 coaching and advice on building projects for classes",
+              "Nation-wide reach in different Tec de Monterrey campuses using online technologies such as Discord and Zoom"
+            ]}
+          />
+
+        </div>
+        
       </div>
+      <div className=" flex justify-center w-screen h-20 items-center bg-slate-900">
+          <a
+            href="https://www.linkedin.com/in/kraken-d-6110798b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-lg mr-4"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/KrakenDominguezz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-lg"
+          >
+            GitHub
+          </a>
+        </div>
     </div>
   )
 }
