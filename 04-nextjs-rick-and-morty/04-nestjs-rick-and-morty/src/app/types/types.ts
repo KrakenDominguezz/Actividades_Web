@@ -8,5 +8,7 @@ export interface Character {
     };
     image: string;
     favorite?: boolean; // Optional favorite property
+    gender: string;
+    
 
 }

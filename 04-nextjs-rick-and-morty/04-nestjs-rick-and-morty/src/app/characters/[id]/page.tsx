@@ -1,60 +1,67 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'; // Assuming you're using axios for API requests
+"use client"
 
-const CharacterPage = ({ id }) => {
-  const [character, setCharacter] = useState(null);
-  const [error, setError] = useState(null);
+import CharacterLayout from "@/app/components/characterlayout";
+import { Character } from '@/app/types/types';
+import handler from "@/app/api/getcharacter/route";
+import React, { useEffect, useState } from 'react';
+import Navbar from "@/app/components/navBar";
+import { useParams } from 'next/navigation'
+import Image from "next/image";
 
-  useEffect(() => {
-    const fetchCharacter = async () => {
-      try {
-        const response = await axios.get(`https://rickandmortyapi.com/api/character/${id}`);
-        setCharacter(response.data);
-      } catch (error) {
-        setError(error.message);
-      }
-    };
 
-    fetchCharacter();
-  }, [id]); // Dependency on id for refetching on ID change
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
 
-  if (!character) {
-    return <div>Loading...</div>;
-  }
+const Page: React.FC = () => {
 
-  // Display character information using character object
-  return (
-    <div>
-      <h1>{character.name}</h1>
-      <img src={character.image} alt={character.name} />
-      <p>Status: {character.status}</p>
-      <p>Species: {character.species}</p>
-      {/* Display other character properties */}
-    </div>
-  );
-};
+    const params = useParams<{id : string}>()
 
-export default CharacterPage;
 
-// Get initial props for dynamic routing
-export async function getStaticProps({ params }) {
-  const { id } = params;
+    const [character, setCharacters] = useState<Character | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
-  try {
-    const response = await axios.get(`https://rickandmortyapi.com/api/character/${id}`);
-    return {
-      props: {
-        id,
-        character: response.data, // Pass character data as props
-      },
-    };
-  } catch (error) {
-    return {
-      notFound: true, // Handle cases where character ID is not found
-    };
-  }
+    useEffect(() => {
+        const fetchCharacters = async () => {
+          try {
+            const response = await handler(params.id);
+            setCharacters(response); // Set the entire response
+          } catch (error) {
+            // ... handle errors
+          }
+        };
+      
+        fetchCharacters();
+      }, []);
+      
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    return (
+        <div>
+          <Navbar />
+            <div id="Information" className="flex  gap-10 text-center text-black  text-l h-screen mt-10 justify-center">
+                <div className="h-1/3">
+                    <Image src={character?.image} width={500} height={500}>
+                    </Image>
+                </div>
+
+                <div className='flex flex-col gap-10'>
+                    <h2 className="text-s">Name: {character?.name}</h2>
+                    <p>Status: {character?.status}</p>
+                    <p>Gender:  {character?.gender}</p>
+                    <p>Location: {character?.location.name}</p>
+
+                </div>
+
+            </div>
+        </div>
+      );
+      
+      
+      
+      
+      
 }
+
+export default Page;
